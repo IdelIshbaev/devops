@@ -27,6 +27,10 @@ or
 ```
 flask run
 ```
+to test
+```
+py.test
+```
 or use Docker
 ```
 docker build . -t devops
