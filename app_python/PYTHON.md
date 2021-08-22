@@ -1,5 +1,6 @@
 # Python Best Practices 
 
+0. I have chosen flaskover django because flask is known as best practice for small apps.
 1. Beautiful is better than ugly.
 2. Explicit is better than implicit.
 3. Simple is better than complex.
