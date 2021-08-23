@@ -8,15 +8,17 @@ This simple project is created by flask. There is a one page web app that shows 
 
 ## Getting Started
 clone or download the repo and start it
+
 ### Dependencies
 flask
 os
 pytz
 datetime
 docker
+
 ### Installing
 
-use git clone
+use git clone or dowload the repo
 
 ### Executing program
 
@@ -43,10 +45,10 @@ py.test
 ```
 ## Help
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+For any help you can refer to
+https://docs.docker.com/
+and 
+https://flask.palletsprojects.com/en/2.0.x/
 
 ## Authors
 
