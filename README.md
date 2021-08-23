@@ -27,10 +27,6 @@ or
 ```
 flask run
 ```
-to test
-```
-py.test
-```
 or use Docker
 ```
 docker build . -t devops
@@ -40,7 +36,11 @@ see the app in
 ```
 0.0.0.0:5000
 ```
-
+### Testing
+to test run in app_python
+```
+py.test
+```
 ## Help
 
 Any advise for common problems or issues.
