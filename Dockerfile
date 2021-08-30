@@ -2,6 +2,8 @@ FROM python:3.9.0-alpine
 
 LABEL maintainer="i.ishbaev@innopolis.unviversity"
 
+RUN adduser --disabled-password app -s /bin/sh -h /home/app
+
 WORKDIR /app
 
 COPY requirements.txt /app/
