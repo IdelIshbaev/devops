@@ -20,3 +20,14 @@
 17. If the implementation is hard to explain, it’s a bad idea.
 18. If the implementation is easy to explain, it may be a good idea.
 19. Namespaces are one honking great idea — let’s do more of those!
+
+TESTING:
+1. Tests Should Be Fast
+2. Tests Should Be Simple
+3. Test Shouldn’t Duplicate Implementation Logic
+4. Tests Should Be Readable
+5. Tests Should Be Deterministic
+6. Make Sure They’re Part of the Build Process
+7. Distinguish Between The Many Types of Test Doubles and Use Them Appropriately
+8. Adopt a Sound Naming Convention for Your Tests
+9. Don’t Couple Your Tests With Implementation Details
