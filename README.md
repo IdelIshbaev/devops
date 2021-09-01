@@ -38,6 +38,14 @@ see the app in
 ```
 0.0.0.0:5000
 ```
+#### terraform / vagrant
+- I had an error for terraform that is common for macos
+That's why I have used vagrant (that was not forbidden afaik)
+``` in terraform folder
+vagrant up
+vagrant ssh
+vagrant destroy
+```
 ### Testing
 to test run in app_python
 ```
