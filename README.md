@@ -43,6 +43,26 @@ to test run in app_python
 ```
 py.test
 ```
+
+### Ansible
+run local vm (vagrant)
+```
+cd terraform
+vagrant up
+```
+use ansible
+```
+cd ..
+cd ansible
+ansible-playbook -i ./inventory/hosts.yml ./playbooks/playbookDocker.yml
+```
+docker is installed in vagrant vm
+can be checked by 
+```
+cd vagrant 
+vagrant ssh
+docker -v
+```
 ## Help
 
 For any help you can refer to
