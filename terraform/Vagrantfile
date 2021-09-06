@@ -1,0 +1,16 @@
+# source: https://medium.com/@JohnFoderaro/how-to-set-up-a-local-linux-environment-with-vagrant-163f0ba4da77
+
+VAGRANT_BOX = 'ubuntu/trusty64'
+VM_NAME = 'new-vm'
+VM_USER = 'vagrant'
+MAC_USER = 'idel_isbaev'
+Vagrant.configure(2) do |config|
+  config.vm.box = VAGRANT_BOX
+
+  config.vm.hostname = VM_NAME
+  config.vm.provider "virtualbox" do |v|
+    v.name = VM_NAME
+    v.memory = 2048
+  end
+  config.vm.network "private_network", type: "dhcp"
+end
