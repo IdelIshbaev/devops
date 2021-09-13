@@ -40,3 +40,13 @@ second app in folder app_vue
 ![image](./screenshots/3.png)
 ![image](./screenshots/4.png)
 ![image](./screenshots/5.png)
+
+# lab8
+![image](./screenshots/02.png)
+![image](./screenshots/03.png)
+![image](./screenshots/04.png)
+![image](./screenshots/07.png)
+![image](./screenshots/05.png)
+![image](./screenshots/08.png)
+![image](./screenshots/06.png)
+
