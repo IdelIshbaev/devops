@@ -1,0 +1,48 @@
+version: '2.4'
+
+networks:
+  logging:
+
+services:
+  app:
+    image: idelishbaev/devops:latest
+    container_name: monitoring-app
+    ports:
+      - "5000:5000"
+    networks:
+      - logging
+    logging:
+      driver: "json-file"
+      options:
+        tag: "{{ .ImageName }}|{{ .Name }}"
+
+  loki:
+    image: grafana/loki:${LOKI_TAG}
+    container_name: monitoring-loki
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./loki.yml:/etc/loki/loki.yml
+    command: -config.file=/etc/loki/loki.yml
+    networks:
+      - logging
+
+  promtail:
+    image: grafana/promtail:${PROMTAIL_TAG}
+    container_name: monitoring-promtail
+    ports:
+      - "9080:9080"
+    volumes:
+      - /var/lib/docker/containers:/var/lib/docker/containers
+      - ./promtail.yml:/etc/promtail/promtail.yml
+    command: -config.file=/etc/promtail/promtail.yml
+    networks:
+      - logging
+
+  grafana:
+    image: grafana/grafana:${GRAFANA_TAG}
+    container_name: monitoring-grafana
+    ports:
+      - "3000:3000"
+    networks: 
+      - logging
