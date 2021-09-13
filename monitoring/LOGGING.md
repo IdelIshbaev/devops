@@ -1,3 +1,4 @@
+
 Best practices:
 1. Loki
 - Static labels are good
@@ -26,3 +27,16 @@ Best practices:
 - Reuse your dashboards and enforce consistency by using templates and variables.
 - Be careful with stacking graph data.
 - The visualizations can be misleading, and hide important data. Recommended turning it off in most cases.
+
+## run
+```
+docker-compose up
+```
+## screenshots:
+![image](./screenshots/2.png)
+
+# Bonus task
+second app in folder app_vue
+![image](./screenshots/3.png)
+![image](./screenshots/4.png)
+![image](./screenshots/5.png)
