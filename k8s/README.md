@@ -15,8 +15,8 @@ minikube service app-vue-serv
 OR
 minikube service app-python-serv
 ```
-Ingress is used for managing users's access to the Kubernetes cluster services
-Ingress controleer is a load balancer that provides bridge btw Kubernetes services and external services. 
-StatefulSet manages deployment and scaling of set of Pods.
-DaemonSet ensure that Nodes run cope of Pod.
-PersistentVolumes offers Kub. applications a effecient way to request, consimbe and storage resources. In short, it is a piese of ctorage in a cluster.
+- Ingress is used for managing users's access to the Kubernetes cluster services
+- Ingress controleer is a load balancer that provides bridge btw Kubernetes services and external services. 
+- StatefulSet manages deployment and scaling of set of Pods.
+- DaemonSet ensure that Nodes run cope of Pod.
+- PersistentVolumes offers Kub. applications a effecient way to request, consimbe and storage resources. In short, it is a piese of ctorage in a cluster.
