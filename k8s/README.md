@@ -20,3 +20,15 @@ minikube service app-python-serv
 - StatefulSet manages deployment and scaling of set of Pods.
 - DaemonSet ensure that Nodes run cope of Pod.
 - PersistentVolumes offers Kub. applications a effecient way to request, consimbe and storage resources. In short, it is a piese of ctorage in a cluster.
+
+# lab 10
+![image](./screenshots/5.1.png)
+![image](./screenshots/6.png)
+![image](./screenshots/7.png)
+## Vue.js app + python app
+![image](./screenshots/8.png)
+![image](./screenshots/9.png)
+![image](./screenshots/91.png)
+
+
+A library chart is a type of Helm chart. It can define chart primitives, and other Helm templates can share it in other charts in order to make users be able to share reusable snippets of code.
