@@ -38,6 +38,12 @@ see the app in
 ```
 0.0.0.0:5000
 ```
+``` to see the current time (in addition it will write current time to the file, which will be used in next step)
+/
+```
+``` to see the last written time in .txt file
+/visits
+```
 ### Testing
 to test run in app_python
 ```
