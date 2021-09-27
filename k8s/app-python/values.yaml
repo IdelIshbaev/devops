@@ -7,6 +7,9 @@ periodSeconds: 5
 
 replicaCount: 3
 
+configPath: "/etc/config"
+readOnlyConfig: true
+
 image:
   repository: idelishbaev/devops
   pullPolicy: IfNotPresent
