@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: {{ include "app-python.fullname" . }}
   labels:
@@ -11,6 +11,8 @@ spec:
   selector:
     matchLabels:
       {{- include "app-python.selectorLabels" . | nindent 6 }}
+  serviceName: {{ include "app-python.fullname" . }}
+  podManagementPolicy: {{ .Values.statefulSet.podManagementPolicy }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -47,6 +49,8 @@ spec:
             httpGet:
               path: /
               port: http
+            initialDelaySeconds: 10
+            periodSeconds: 30
           readinessProbe:
             httpGet:
               path: /
@@ -57,6 +61,8 @@ spec:
             - name: config
               mountPath: {{ .Values.configPath }}
               readOnly: {{ .Values.readOnlyConfig }}
+            - name: visits
+              mountPath: {{ .Values.visitsPath }}
       volumes:
         - name: config
           configMap:
@@ -73,3 +79,8 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+  volumeClaimTemplates:
+    - metadata:
+        name: visits
+      spec:
+        {{- toYaml .Values.statefulSet.volumeClaimTemplates.spec | nindent 8}}
